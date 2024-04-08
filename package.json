@@ -1,0 +1,17 @@
+{
+  "name": "mongo-mysql-migrate",
+  "version": "1.0.0",
+  "description": "nodejs module to migrate data from mysql database to mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohab Ayman",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.5.0",
+    "mysql": "^2.18.1"
+  }
+}
