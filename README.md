@@ -1,4 +1,4 @@
-# Project Title
+# Migrate MySQL to MongoDB
 
 - This project provides a method to migrate a mysql databases into a mongodb structure through denormalization.
 - The project targets two tables (parent and child) that are joined in MySQL and should be migrated as one collection. a 1 parent collection with the child elements appended to an array as an extra field.
@@ -62,17 +62,28 @@ MONGODB_DBNAME=[MongoDB DB Name Here]
 
 ## Usage
 - fetch mongodb products using 
-    `http://localhost:3000/api/product?page=1&pageSize=2`
+    ```
+    http://localhost:3000/api/product?page=1&pageSize=2
+    ```
 - clear mongodb products using 
-    `http://localhost:3000/api/product/empty`
+    ```
+    http://localhost:3000/api/product/empty
+    ```
 - read mysql products using 
-    `http://localhost:3000/api/product/migrate/test`
+    ```
+    http://localhost:3000/api/product/migrate/test
+    ```
 - migrate the products from mysql to mongodb using 
-    `http://localhost:3000/api/product/migrate/run`
+    ```
+    http://localhost:3000/api/product/migrate/run
+    ```
 
 ## Fixed Issues
 
 - Problem while reading MySQL data
     - your current mysql client is not supporting the authentication
     - your database is not allowing the current client to read using a native password
-    - use the following command on your user to allow using native passwords `ALTER USER '[username]'@'localhost' IDENTIFIED WITH mysql_native_password BY '[YOUR PASSWORD]';`
+    - use the following command on your user to allow using native passwords 
+    ```
+    ALTER USER '[USERNAME]'@'localhost' IDENTIFIED WITH mysql_native_password BY '[PASSWORD]';
+    ```
